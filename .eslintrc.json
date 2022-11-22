@@ -6,10 +6,11 @@
     "extends": [
       "standard-with-typescript", 
       "prettier", 
-    "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"],
-    
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended"
+    ],
+      
     "overrides": [
     ],
     "parserOptions": {
@@ -20,6 +21,6 @@
       "@typescript-eslint", "prettier"
     ],
     "rules": {
-      "prettier/prettier": "error",
+      "prettier/prettier": "error"
     }
 }
