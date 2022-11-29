@@ -2,7 +2,14 @@ import { Button } from "@components/Button";
 import { Input } from "@components/Input";
 import { Center, Heading, Text, VStack } from "native-base";
 
+import { useNavigation } from "@react-navigation/native";
+
 export function SignIn() {
+  const { navigate } = useNavigation();
+
+  function handleToHomeScreen() {
+    navigate("home");
+  }
   return (
     <VStack flex={1} px={10} pb={16} bg="gray.700">
       <Center my={24}>
@@ -26,7 +33,7 @@ export function SignIn() {
         />
 
         <Input placeholder="Senha" secureTextEntry />
-        <Button title="Acessar" />
+        <Button title="Acessar" onPress={handleToHomeScreen} />
       </Center>
 
       <Center mt={24}>
