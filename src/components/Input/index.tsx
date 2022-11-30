@@ -6,12 +6,16 @@ import {
 
 type Props = IInputProps & {
   errorMessage?: string | null;
+  label?: string | null;
 };
 
-export function Input({ errorMessage, isInvalid, ...rest }: Props) {
+export function Input({ errorMessage, label, isInvalid, ...rest }: Props) {
   const invalid = !!errorMessage || isInvalid;
   return (
     <FormControl>
+      <FormControl.Label py={1} color="gray.100">
+        {label}
+      </FormControl.Label>
       <NativeBaseInput
         bg="white"
         h={14}
