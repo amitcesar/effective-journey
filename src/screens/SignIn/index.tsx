@@ -10,6 +10,11 @@ export function SignIn() {
   function handleToHomeScreen() {
     navigate("home");
   }
+
+  function handleToRegisterPage() {
+    navigate("signUp");
+  }
+
   return (
     <VStack flex={1} px={10} pb={16} bg="gray.700">
       <Center my={24}>
@@ -41,7 +46,11 @@ export function SignIn() {
           Ainda não tem acesso?
         </Text>
 
-        <Button title="Criar Conta" variant="outline" onPress={() => {}} />
+        <Button
+          title="Criar Conta"
+          variant="outline"
+          onPress={handleToRegisterPage}
+        />
       </Center>
     </VStack>
   );
